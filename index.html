@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>To do list</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="todo-app" role="application" aria-label="To-do list">
+    <h1>To-Do</h1>
+
+    <form id="task-form" autocomplete="off" aria-label="Add task">
+      <label for="new-task" class="visually-hidden">New task</label>
+      <input id="new-task" name="task" type="text" placeholder="Add a task…" required />
+      <button type="submit">Add</button>
+    </form>
+
+    <ul id="task-list" aria-live="polite"></ul>
+
+    <div class="controls" aria-hidden="true">
+      <!-- optional controls (script can hook these) -->
+      <button id="clear-done" type="button">Clear done</button>
+      <span id="task-count" class="muted">0 tasks</span>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
